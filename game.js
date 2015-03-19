@@ -7,10 +7,10 @@ var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
 var platforms;
 var player;
 var cursors;
+var spaceBar;
 var items;
 var score = 0;
 var scoreText;
-var spaceBar
 
 function preload() {
   game.load.image('sky', 'assets/sky.png');
@@ -90,6 +90,9 @@ function update() {
   }
 
   if((cursors.up.isDown || spaceBar.isDown) && player.body.touching.down) {
-    player.body.velocity.y = -600;
+    player.body.velocity.y = -630;
+  }
+  if(cusrsors.down.isDown && !player.body.touching.down) {
+    player.body.velocity.y = 630;
   }
 }
