@@ -23,6 +23,7 @@ Preload.prototype = {
     this.load.image('star', 'img/star.png')
     this.load.image('diamond', 'img/diamond.png');
     this.load.spritesheet('dude', 'img/dude.png', 32, 48);
+    this.add.plugin(Phaser.Plugin.Debug);
   },
   create: function() {
     this.state.start('Game');
