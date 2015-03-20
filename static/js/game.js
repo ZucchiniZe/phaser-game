@@ -13,11 +13,11 @@ var score = 0;
 var scoreText;
 
 function preload() {
-  game.load.image('sky', 'assets/sky.png');
-  game.load.image('ground', 'assets/platform.png');
-  game.load.image('star', 'assets/star.png')
-  game.load.image('diamond', 'assets/diamond.png');
-  game.load.spritesheet('dude', 'assets/dude.png', 32, 48);
+  game.load.image('sky', 'img/sky.png');
+  game.load.image('ground', 'img/platform.png');
+  game.load.image('star', 'img/star.png')
+  game.load.image('diamond', 'img/diamond.png');
+  game.load.spritesheet('dude', 'img/dude.png', 32, 48);
 }
 
 function create() {
@@ -92,7 +92,7 @@ function update() {
   if((cursors.up.isDown || spaceBar.isDown) && player.body.touching.down) {
     player.body.velocity.y = -630;
   }
-  if(cusrsors.down.isDown && !player.body.touching.down) {
+  if(cursors.down.isDown && !player.body.touching.down) {
     player.body.velocity.y = 630;
   }
 }
